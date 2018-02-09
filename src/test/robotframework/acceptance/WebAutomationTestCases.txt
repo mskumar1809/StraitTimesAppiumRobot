@@ -1,0 +1,43 @@
+*** Settings ***
+
+Documentation  User Story:
+...
+...    As a registered user of StraitTimes,
+...
+...    I should be able to Login into the application successfully using valid Credentials
+...
+...    I should be able to navigate to main article after login
+...    
+...    I should be able to verify if the main article has media in it.
+
+Library  Selenium2Library
+Library  com.StraitTimes.robotframework.Automation.KeywordImplementations
+
+Test Setup       com.StraitTimes.robotframework.Automation.KeywordImplementations.Set up
+Test Teardown    Tear Down
+
+*** Variables ***
+${URL} =  http://www.straitstimes.com
+${BROWSER}=  chrome
+${EMAIL}=  makasampath@gmail.com
+${PASSWORD}=  Work2win
+
+
+
+*** Test Cases ***
+
+Scenario: Verification of Media Content in Main Article as a Logged in User
+    
+    [Tags]    Web Testing
+    
+	Given I am in the app home screen  ${URL}
+    When I navigate to login screen
+    And I enter Email  ${EMAIL}
+    And I enter Password  ${PASSWORD}
+    And I Login into the application
+    Then I should be successfully logged in  ${EMAIL}
+    And I should see the main article with Media
+    When I click the main article
+    Then I should be navigated to main article
+    And I should see the media in the page
+     

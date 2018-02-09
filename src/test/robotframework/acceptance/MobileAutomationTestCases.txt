@@ -27,7 +27,7 @@ ${PASSWORD}=  Work2win
 
 Scenario: Verification of First Article under Latest as a Logged in User
     
-    [Tags]    Feature Testing
+    [Tags]    Mobile Testing
     
 	Given I am in the app home screen
     When I login with valid credentials  ${EMAIL}  ${PASSWORD}
