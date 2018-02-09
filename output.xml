@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180208 22:22:17.545" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Users\User1\Documents\GitRepo\ToucheRobot\JavaRobot" id="s1" name="JavaRobot">
+<suite source="C:\Users\User1\Documents\GitRepo\ToucheRobot\JavaRobot\src" id="s1-s1" name="Src">
+<suite source="C:\Users\User1\Documents\GitRepo\ToucheRobot\JavaRobot\src\test" id="s1-s1-s1" name="Test">
+<suite source="C:\Users\User1\Documents\GitRepo\ToucheRobot\JavaRobot\src\test\robotframework" id="s1-s1-s1-s1" name="Robotframework">
+<suite source="C:\Users\User1\Documents\GitRepo\ToucheRobot\JavaRobot\src\test\robotframework\acceptance" id="s1-s1-s1-s1-s1" name="Acceptance">
+<suite source="C:\Users\User1\Documents\GitRepo\ToucheRobot\JavaRobot\src\test\robotframework\acceptance\TestCases.txt" id="s1-s1-s1-s1-s1-s1" name="TestCases">
+<test id="s1-s1-s1-s1-s1-s1-t1" name="Login UserCase with Mobile Number">
+<kw type="setup" name="Set up">
+<msg timestamp="20180208 22:22:19.011" level="FAIL">No keyword with name 'Set up' found. Did you mean:
+    Selenium2Library.Mouse Up</msg>
+<status status="FAIL" endtime="20180208 22:22:19.012" starttime="20180208 22:22:19.011"></status>
+</kw>
+<kw type="teardown" name="Tear Down">
+<msg timestamp="20180208 22:22:19.016" level="FAIL">No keyword with name 'Tear Down' found.</msg>
+<status status="FAIL" endtime="20180208 22:22:19.016" starttime="20180208 22:22:19.015">No keyword with name 'Tear Down' found.</status>
+</kw>
+<tags>
+<tag>Feature Testing</tag>
+</tags>
+<status status="FAIL" endtime="20180208 22:22:19.016" critical="yes" starttime="20180208 22:22:19.008">Setup failed:
+No keyword with name 'Set up' found. Did you mean:
+    Selenium2Library.Mouse Up
+
+Also teardown failed:
+No keyword with name 'Tear Down' found.</status>
+</test>
+<doc>User Story:
+
+As a registered user of Gotouche,
+
+I should be able to Login into the application successfully using valid Mobile number and its corresponding Password
+
+I should be able to login into the application successfully using Email Address and its corresponding Password</doc>
+<status status="FAIL" endtime="20180208 22:22:19.017" starttime="20180208 22:22:18.084"></status>
+</suite>
+<status status="FAIL" endtime="20180208 22:22:19.019" starttime="20180208 22:22:18.082"></status>
+</suite>
+<status status="FAIL" endtime="20180208 22:22:19.020" starttime="20180208 22:22:18.079"></status>
+</suite>
+<status status="FAIL" endtime="20180208 22:22:19.021" starttime="20180208 22:22:18.077"></status>
+</suite>
+<status status="FAIL" endtime="20180208 22:22:19.023" starttime="20180208 22:22:18.074"></status>
+</suite>
+<status status="FAIL" endtime="20180208 22:22:19.024" starttime="20180208 22:22:18.023"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">Feature Testing</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="JavaRobot" pass="0">JavaRobot</stat>
+<stat fail="1" id="s1-s1" name="Src" pass="0">JavaRobot.Src</stat>
+<stat fail="1" id="s1-s1-s1" name="Test" pass="0">JavaRobot.Src.Test</stat>
+<stat fail="1" id="s1-s1-s1-s1" name="Robotframework" pass="0">JavaRobot.Src.Test.Robotframework</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1" name="Acceptance" pass="0">JavaRobot.Src.Test.Robotframework.Acceptance</stat>
+<stat fail="1" id="s1-s1-s1-s1-s1-s1" name="TestCases" pass="0">JavaRobot.Src.Test.Robotframework.Acceptance.TestCases</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180208 22:22:19.005" level="ERROR">Error in file 'C:\Users\User1\Documents\GitRepo\ToucheRobot\JavaRobot\src\test\robotframework\acceptance\TestCases.txt': Importing test library 'com.Touche.robotframework.Automation.KeywordImplementations' failed: ImportError: No module named com.Touche.robotframework.Automation
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\WINDOWS\SYSTEM32\python27.zip
+  C:\Python27\DLLs
+  C:\Python27\lib
+  C:\Python27\lib\plat-win
+  C:\Python27\lib\lib-tk
+  C:\Python27
+  C:\Python27\lib\site-packages
+  C:\Python27\lib\site-packages\wx-2.8-msw-unicode</msg>
+<msg timestamp="20180208 22:22:19.006" level="ERROR">Error in file 'C:\Users\User1\Documents\GitRepo\ToucheRobot\JavaRobot\src\test\robotframework\acceptance\TestCases.txt': Importing test library 'com.Touche.robotframework.Automation.ToucheLandingPage' failed: ImportError: No module named com.Touche.robotframework.Automation
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\WINDOWS\SYSTEM32\python27.zip
+  C:\Python27\DLLs
+  C:\Python27\lib
+  C:\Python27\lib\plat-win
+  C:\Python27\lib\lib-tk
+  C:\Python27
+  C:\Python27\lib\site-packages
+  C:\Python27\lib\site-packages\wx-2.8-msw-unicode</msg>
+</errors>
+</robot>

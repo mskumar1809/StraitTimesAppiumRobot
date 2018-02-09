@@ -1,0 +1,39 @@
+*** Settings ***
+
+Documentation  User Story:
+...
+...    As a registered user of StraitTimes Mobile App,
+...
+...    I should be able to Login into the application successfully using valid Credentials
+...
+...    I should be able to navigate to main article after login
+...    
+...    I should be able to verify if the main article has media in it.
+
+Library  Selenium2Library
+Library  com.StraitTimes.robotframework.Automation.AppiumController
+
+Test Setup       com.StraitTimes.robotframework.Automation.AppiumController.Set Up
+#Test Teardown    Tear Down
+
+*** Variables ***
+
+${EMAIL}=  makasampath@gmail.com
+${PASSWORD}=  Work2win
+
+
+
+*** Test Cases ***
+
+Scenario: Verification of First Article under Latest as a Logged in User
+    
+    [Tags]    Feature Testing
+    
+	Given I am in the app home screen
+    When I login with valid credentials  ${EMAIL}  ${PASSWORD}
+    Then I should be logged in successfully  ${EMAIL}
+    When I tap the latest tab
+    And I open the first article
+    Then I should see the first article
+
+     
