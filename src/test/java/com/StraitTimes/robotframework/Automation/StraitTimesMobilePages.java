@@ -86,7 +86,6 @@ public class StraitTimesMobilePages {
 					if(Ad.isDisplayed()) {
 						driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 					}
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 					
