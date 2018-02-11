@@ -28,7 +28,7 @@ ${PASSWORD}=  Work2win
 
 Scenario: Verification of Media Content in Main Article as a Logged in User
     
-    [Tags]    Web Testing
+    [Tags]    webtesting
     
 	Given I am in the app home screen  ${URL}
     When I navigate to login screen

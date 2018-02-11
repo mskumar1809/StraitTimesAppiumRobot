@@ -6,15 +6,14 @@ Documentation  User Story:
 ...
 ...    I should be able to Login into the application successfully using valid Credentials
 ...
-...    I should be able to navigate to main article after login
-...    
-...    I should be able to verify if the main article has media in it.
+...    I should be able to navigate to first article under latest tab after login
+
 
 Library  Selenium2Library
 Library  com.StraitTimes.robotframework.Automation.AppiumController
 
 Test Setup       com.StraitTimes.robotframework.Automation.AppiumController.Set Up
-#Test Teardown    Tear Down
+Test Teardown    Tear Down
 
 *** Variables ***
 
@@ -27,7 +26,7 @@ ${PASSWORD}=  Work2win
 
 Scenario: Verification of First Article under Latest as a Logged in User
     
-    [Tags]    Mobile Testing
+    [Tags]    MobileTesting
     
 	Given I am in the app home screen
     When I login with valid credentials  ${EMAIL}  ${PASSWORD}

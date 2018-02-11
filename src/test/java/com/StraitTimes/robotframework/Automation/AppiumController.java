@@ -33,13 +33,13 @@ public class AppiumController {
         }
         DesiredCapabilities caps = new DesiredCapabilities();
 
-		caps.setCapability("deviceName", "One Plus 5");
+		caps.setCapability("deviceName", "Google Emulator");
 
-		caps.setCapability("udid", "3a5cf70");
+		caps.setCapability("udid", "emulator-5554");
 
 		caps.setCapability("platformName", "Android");
 
-		caps.setCapability("platformVersion", "8.0.0");
+		caps.setCapability("platformVersion", "8.1.0");
 
 		caps.setCapability("appPackage", "com.buuuk.st");
 
@@ -70,7 +70,7 @@ public class AppiumController {
 		
 	@RobotKeyword("I login with valid credentials")
 	@ArgumentNames({ "Email", "Password"})
-	public void iLoginWithValidCredentials(String email, String password) {
+	public void iLoginWithValidCredentials(String email, String password) throws InterruptedException {
 		
 		straitTimesPages.loginToApplication(email, password);
 		
@@ -96,6 +96,11 @@ public class AppiumController {
 	@RobotKeyword("I should see the first article")
 	public void iShouldSeeTheFirstArticle() {
 		straitTimesPages.assertFirstArticle();
+	}
+	
+	@RobotKeyword("Tear Down")
+	public void tearDown() {
+		driver.quit();
 	}
 	
 }

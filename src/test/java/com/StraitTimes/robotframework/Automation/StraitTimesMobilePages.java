@@ -16,10 +16,8 @@ import io.appium.java_client.AppiumDriver;
 
 public class StraitTimesMobilePages {
 	
-	
 
 	AppiumDriver driver;
-	
 	
 	By drawerMenu = By.xpath("//*[@content-desc = 'Navigate up']");
 	
@@ -34,7 +32,6 @@ public class StraitTimesMobilePages {
 	By latest = By.xpath("//android.widget.TextView[@text='LATEST']");
 	
 	
-			
 	public StraitTimesMobilePages(AppiumDriver driver)
 
 	{
@@ -64,18 +61,37 @@ public class StraitTimesMobilePages {
   	 }
 
 	public void loginToApplication(String email, String password2) {
-		driver.findElement(drawerMenu).click();
-		driver.findElement(drawerMenu).click();
+		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(loginButton).click();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.findElement(username).sendKeys(email);
-
-		driver.findElement(password).sendKeys(password2);
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.findElement(btn_continue).click();
-	
-	}
+		driver.findElement(drawerMenu).click();
+		
+			
+				
+				try {
+					
+					 {
+						driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+						driver.findElement(drawerMenu).click();
+						driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+						driver.findElement(loginButton).click();
+						driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+						driver.findElement(username).sendKeys(email);
+						driver.findElement(password).sendKeys(password2);
+						driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+						driver.findElement(btn_continue).click();
+					}
+							
+				} catch (IllegalMonitorStateException e ) {
+					WebElement Ad = driver.findElement(By.id("com.buuuk.st:id/toolbar_app_logo"));
+					if(Ad.isDisplayed()) {
+						driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+					}
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+					
+			}
+		
 
 	public void assertLogin(String email) {
 		
@@ -96,6 +112,7 @@ public class StraitTimesMobilePages {
 		
 		List<WebElement> list=new ArrayList<WebElement>();
 		
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		list = driver.findElementsById("com.buuuk.st:id/layout_item");
 		
 		list.get(0).click();
