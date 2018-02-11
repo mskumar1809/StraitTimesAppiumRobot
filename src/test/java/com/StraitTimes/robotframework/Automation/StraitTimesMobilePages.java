@@ -64,29 +64,32 @@ public class StraitTimesMobilePages {
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(drawerMenu).click();
-		
 			
 				
-				try {
-					
-					 {
+				try {	
 						driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 						driver.findElement(drawerMenu).click();
 						driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 						driver.findElement(loginButton).click();
-						driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+						driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 						driver.findElement(username).sendKeys(email);
 						driver.findElement(password).sendKeys(password2);
 						driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 						driver.findElement(btn_continue).click();
-					}
 							
 				} catch (IllegalMonitorStateException e ) {
 					WebElement Ad = driver.findElement(By.id("com.buuuk.st:id/toolbar_app_logo"));
 					if(Ad.isDisplayed()) {
 						driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+						driver.findElement(drawerMenu).click();
+						driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+						driver.findElement(loginButton).click();
+						driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+						driver.findElement(username).sendKeys(email);
+						driver.findElement(password).sendKeys(password2);
+						driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+						driver.findElement(btn_continue).click();
 					}
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 					
